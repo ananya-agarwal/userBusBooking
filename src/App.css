@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar {
+  justify-content: end;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  margin: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+}
+
+.nav-item span {
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(152, 180, 189);
+  transition: all 1s ease-in-out;
+}
+.nav-item:hover span {
+  width: 100%;
+}
+.nav-item a:hover{
+  color: rgb(152, 180, 189);
+}
+
+.routes {
+  position: relative;
+  height: 900px;
+  width: 100%;
+  background-image: url("https://img.freepik.com/free-photo/3d-portrait-bus-driver_23-2150793959.jpg?t=st=1742542241~exp=1742545841~hmac=45654442426ed6fe950ab1e6d58475a4cc9cd4a5b324adc15d8cce6f9162ff1a&w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.routes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(73, 61, 61, 0.5);
+  z-index: 1;
+}
+
+.route-btn {
+  border: 2px solid black;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.route-btn:hover {
+  background-color: rgb(152, 180, 189);
+}
+
+.booking-page {
+  height: 1000px;
+  background-image: url("https://img.freepik.com/free-vector/appointment-booking-smartphone_23-2148559902.jpg?t=st=1741353692~exp=1741357292~hmac=cbad7126debc1b1082637bd8716dc99dabd68ce7001cd76f5a099536616ea96f&w=1480");
+}
+
+.container-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-heading {
+  color: rgb(67, 171, 236);
+  width: 15ch;
+  overflow: hidden;
+  animation: typing 5s steps(15) infinite alternate-reverse;
+  text-wrap: nowrap;
+}
+@keyframes typing {
+  from {
+    width: 0ch;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 48px;
+  font-size: 20px;
+  flex-direction: column;
+  padding: 50px;
+  animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.category-content {
+  margin: 5px;
+  padding: 5px;
+}
+
+.book-btn {
+  background-color: burlywood;
+  animation: animate 5s infinite ease;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+@keyframes animate {
+  0% {
+    background-color: rgba(199, 199, 199, 0.878);
+  }
+  50% {
+    background-color: rgb(67, 171, 236);
+  }
+  100% {
+    background-color: rgba(199, 199, 199, 0.878);
+  }
+}
+
+.category-content {
+  animation: swing 1s ease-in-out;
+}
+@keyframes swing {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.price-value,
+.seats-value {
+  font-weight: 900;
+}
+
+.credentials-form {
+  height: 900px;
+  background-image: url("https://img.freepik.com/free-vector/abstract-technology-concept-design-with-wire-mesh_1017-14624.jpg?t=st=1741410996~exp=1741414596~hmac=33e74083bdc80676e06a91291cfc2d03ae0cd3f0d95ba79dd60ccbf82bca8bdc&w=1800");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-inside{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.form-inside input {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.contact-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  gap: 24px;
+  font-size: 20px;
+  background-image: url("https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?t=st=1742548019~exp=1742551619~hmac=a1ca1da57e7df2f9635cbe3f4a7e82686cfe423de9420a3094a5dab20098711e&w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.btn{
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 5px;
+  background-color: rgba(2, 80, 213, 0.807);
   color: white;
+  width: fit-content;
+  font-size: 20px;
+}
+.btn:hover{
+  border: 2px solid white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer{
+  text-align: center;
+  padding: 10px 0
 }
