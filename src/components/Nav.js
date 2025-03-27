@@ -10,7 +10,7 @@ const Nav = () => {
         <span></span>
       </div>
       <div className='nav-item'>
-        <Link to='./Contact'>Contact Us</Link>
+        <Link to='/Contact'>Contact Us</Link>
         <span></span>
       </div>
       <div className='nav-item'>
